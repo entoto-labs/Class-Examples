@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./../jquery-3.4.1.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        var btn = document.getElementById("#secondBtn");
+
+       $("#secondBtn").click(function () {
+          $.get("./../random.txt",function (data, status){
+              $("#test").html(data);
+              alert(status);
+          }) 
+       });
+    });
+</script>
+<body>
+<button id="btn"> Click me to get data!</button>
+<button id="secondBtn"> don't click me</button>
+<button id="thirdBtn"> please stop clicking me!</button>
+<p id="test"></p>
+</body>
+</html>
